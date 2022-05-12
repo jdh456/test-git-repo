@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-GPIO.setup(led_pin, GPI0.OUT)
+GPIO.setup(led_pin, GPIO.OUT)
 
 light_on = False
 
