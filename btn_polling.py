@@ -23,7 +23,7 @@ def button_callback(channel):
      
    else:
      GPIO.output(led_pin,0)
-     print("LED OFF!)
+     print("LED OFF!")
    light_on = not light_on
            
  GPI0.add_event_detect(button_pin,GPIO.RISING,callback=button_callback, bouncetime=300)
