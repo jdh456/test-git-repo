@@ -16,6 +16,20 @@ GPIO.add_event_detect(button_pin, GPIO.RISING,callback=button_callback)
 
 while 1:
   time.sleep(0.1)
+  
+light_on = False
+
+def button_callback(channel):
+   global light_on
+   if light_on == False:
+     GPIO.output(led_pin, 1)
+     print("LED ON!")
+     
+   else:
+     GPIO.output(led_pin,0)
+     print("LED OFF!)
+     
+   light_on  = not light_on
 
 
 
